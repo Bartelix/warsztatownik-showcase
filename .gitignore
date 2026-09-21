@@ -1,0 +1,36 @@
+# Nuxt dev/build outputs
+.output
+.data
+.nuxt
+.nitro
+.cache
+dist
+
+# Node dependencies
+node_modules
+
+# Logs
+logs
+*.log
+
+# Misc
+.DS_Store
+.fleet
+.idea
+
+# Machine-specific Claude Code settings (paths under /Users/bart)
+.claude/settings.local.json
+
+# Local code-review scratch files, not for the repository
+.claude/code-review__prompt.md
+
+# Working material, not for the repository
+docs/Warsztatownik-pytania-do-taty.docx
+
+# Cloudflare
+.wrangler
+
+# Local env files
+.env
+.env.*
+!.env.example

@@ -1,0 +1,51 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .bg { fill: #2B2E33; }
+      .nut { fill: #363A42; }
+      .nut-inner-ring { fill: none; stroke: #454A54; stroke-width: 3; }
+      .paper { fill: #F2EEE4; }
+      .paper-shadow { fill: #DCD6C6; }
+      .line { stroke: #8A8378; stroke-width: 4; stroke-linecap: round; }
+      .accent-line { stroke: #E28A1F; stroke-width: 5; stroke-linecap: round; }
+      .check { fill: none; stroke: #E28A1F; stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+  </defs>
+
+  <!-- Pełne, nieprzezroczyste tło — wypełnia cały obszar ikony.
+       iOS samo zaokrągli rogi (apple-touch-icon), Android przytnie do
+       dowolnego kształtu maski (koło, "squircle" itp.), więc tło musi
+       sięgać krawędzi, a nie treść ikony. -->
+  <rect class="bg" x="0" y="0" width="200" height="200" />
+
+  <!-- Cała reszta grafiki przeskalowana i wycentrowana tak, żeby
+       zmieścić się w bezpiecznym okręgu o promieniu 40% rozmiaru ikony
+       (standard "maskable icon" na Androidzie) — z zapasem. -->
+  <g transform="translate(100 100) scale(0.72) translate(-100 -100)">
+
+    <!-- Sześciokątna nakrętka (motyw warsztatowy) -->
+    <polygon class="nut" points="100,10 173,53 173,147 100,190 27,147 27,53" />
+    <polygon class="nut-inner-ring" points="100,24 161,60 161,140 100,176 39,140 39,60" />
+    <circle cx="100" cy="100" r="6" fill="#454A54" opacity="0.6" />
+
+    <!-- Notatnik (motyw notatnika/planera) -->
+    <g transform="translate(100 102) rotate(-6) translate(-42 -52)">
+      <rect class="paper-shadow" x="3" y="4" width="84" height="104" rx="6" />
+      <rect class="paper" x="0" y="0" width="84" height="104" rx="6" />
+
+      <g fill="#B9B2A0">
+        <circle cx="14" cy="10" r="3.4" />
+        <circle cx="30" cy="10" r="3.4" />
+        <circle cx="46" cy="10" r="3.4" />
+        <circle cx="62" cy="10" r="3.4" />
+      </g>
+
+      <line class="line" x1="14" y1="34" x2="70" y2="34" />
+      <line class="line" x1="14" y1="50" x2="70" y2="50" />
+      <line class="accent-line" x1="14" y1="66" x2="52" y2="66" />
+      <line class="line" x1="14" y1="82" x2="60" y2="82" />
+
+      <path class="check" d="M 58 60 L 65 68 L 80 48" />
+    </g>
+  </g>
+</svg>
